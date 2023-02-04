@@ -28,6 +28,13 @@ namespace Snake
               Console.WriteLine(i);
             }
 
+            numlist.RemoveAt(0);
+
+            List<Point> plist = new List<Point>();
+            plist.Add(p1);
+            plist.Add(p2);
+
+
 
             
 

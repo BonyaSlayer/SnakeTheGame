@@ -15,6 +15,7 @@ namespace Snake
             //p2.Draw();
 
             HorizontalLine line = new HorizontalLine(2,6,1, '-');
+            
 
 
             VerticalLine line2 = new VerticalLine(1, 5, 1, '|');

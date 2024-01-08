@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    internal class HorizontalLine
+    internal class HorizontalLine : Figure
     {
-        List<Point> pList;
+
         /// <summary>
         /// Конструктор Горизонтальных линий на оси х/у
         /// </summary>
@@ -25,14 +25,6 @@ namespace Snake
                 pList.Add(p);
             }
             
-        }
-
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
-        }
+        }        
     }
 }

@@ -57,5 +57,26 @@ namespace Snake
             else if (key == ConsoleKey.DownArrow && direction != Direction.UP)
                 direction = Direction.DOWN;
         }
+
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        internal bool isCollision(Point point)
+        {
+            foreach (Point p in pList)
+                if (point.IsHit(p))
+                    return true;
+            return false;
+        }
     }
 }
